@@ -13,6 +13,8 @@ $ cmake ..
 $ make
 ```
 
+> Attention, high CPU load!
+
 ## How to use
 
 ### Print usage
@@ -21,6 +23,7 @@ $ make
 $ ./uncrc
 
 Usage: uncrc [<s:unhash>] <s:origin> [<u:leavel>]
+
 $
 ```
 
@@ -30,6 +33,7 @@ $
 $ ./uncrc file
 
 [crc32           = e6483c91]
+
 $
 ```
 
@@ -61,6 +65,25 @@ $ ./uncrc current_file origin_file
 $
 ```
 
+## Additional Information
+
+The program is written for use with BASH scripts.
+To safely pad the script with bytes at the end of the file,
+which may be ambiguously perceived by the interpreter,
+should be commented out with a multi-line comment the remaining
+part of the file.
+
+```sh
+$ cat ../test_script.sh
+
+#!/bin/bash
+...
+clear
+exit 0
+: <<'END'
+
+$
+```
 
 
 

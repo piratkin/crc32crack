@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     if (argc < 2)
     {
         perr(EXIT_SUCCESS,
-            "\nUsage: UNCRC [<s:unhash>] <s:origin> [<u:leavel>]\n");
+            "Usage: UNCRC [<s:unhash>] <s:origin> [<u:leavel>]\n\n");
     }  
     else if (argc < 3)
     {
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
 
         closefd(fd);
         
-        printf("\n[crc32           = %x]\n", hash);
+        printf("\n[crc32           = %x]\n\n", hash);
         exit(EXIT_SUCCESS);
     }
     else if (argc > 3)
